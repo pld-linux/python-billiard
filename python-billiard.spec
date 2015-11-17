@@ -19,7 +19,7 @@ URL:		https://github.com/celery/billiard
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.612
 %if %{with python2}
-BuildRequires:	python-devel >= 2.7
+BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
 %if %{with tests}
 BuildRequires:	python-mock
