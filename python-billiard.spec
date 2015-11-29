@@ -17,7 +17,7 @@ Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}
 Patch0:		unittest2.patch
 URL:		https://github.com/celery/billiard
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.612
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools
