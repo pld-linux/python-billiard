@@ -9,7 +9,7 @@
 Summary:	Multiprocessing Pool Extensions
 Name:		python-%{module}
 Version:	3.3.0.21
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
