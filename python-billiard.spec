@@ -9,7 +9,7 @@
 Summary:	Multiprocessing Pool Extensions
 Name:		python-%{module}
 Version:	3.3.0.21
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
@@ -63,6 +63,9 @@ fixes/improvements from python-trunk.
 Summary:	%{module} API documentation
 Summary(pl.UTF-8):	Dokumentacja API %{module}
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for %{module}.
