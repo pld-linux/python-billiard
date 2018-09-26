@@ -1,20 +1,19 @@
 #
 # Conditional build:
 %bcond_without	doc	# don't build doc
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do perform "make test" (downloads external code)
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
 %define 	module	billiard
 Summary:	Multiprocessing Pool Extensions
 Name:		python-%{module}
-Version:	3.3.0.21
-Release:	6
+Version:	3.5.0.4
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
-# Source0-md5:	5304a48344d8f7e821d06f57da8af1f4
-Patch0:		unittest2.patch
+# Source0-md5:	e9558e6969b6e3f48891c2122f365c60
 URL:		https://github.com/celery/billiard
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
@@ -75,7 +74,6 @@ Dokumentacja API %{module}.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
 %if %{with python2}
@@ -121,10 +119,6 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/%{module}/*.py[co]
 %dir %{py_sitedir}/%{module}/dummy
 %{py_sitedir}/%{module}/dummy/*.py[co]
-%dir %{py_sitedir}/%{module}/py2
-%{py_sitedir}/%{module}/py2/*.py[co]
-%dir %{py_sitedir}/%{module}/tests
-%{py_sitedir}/%{module}/tests/*.py[co]
 %{py_sitedir}/_%{module}.so
 %{py_sitedir}/%{module}-%{version}-py*.egg-info
 %endif
