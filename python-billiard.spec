@@ -8,12 +8,13 @@
 %define 	module	billiard
 Summary:	Multiprocessing Pool Extensions
 Name:		python-%{module}
-Version:	3.5.0.4
-Release:	2
+Version:	3.6.2.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
-Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
-# Source0-md5:	e9558e6969b6e3f48891c2122f365c60
+# Source0:	https://pypi.python.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
+Source0:	https://pypi.debian.net/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	04f6ad67ed874ec12395e9750601e509
 URL:		https://github.com/celery/billiard
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
