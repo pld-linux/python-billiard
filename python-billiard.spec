@@ -62,7 +62,7 @@ Summary:	Multiprocessing Pool Extensions
 Summary(pl.UTF-8):	Rozszerzenia puli procesów
 Group:		Libraries/Python
 Requires:	python3-modules >= 1:3.5
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description -n python3-%{module}
 billiard is a fork of the Python 2.7 multiprocessing package. The
@@ -82,7 +82,7 @@ poprawki błędów i ulepszenia.
 Summary:	API documentation for billiard module
 Summary(pl.UTF-8):	Dokumentacja API modułu billiard
 Group:		Documentation
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description apidocs
 API documentation for billiard module.
