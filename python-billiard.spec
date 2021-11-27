@@ -5,17 +5,17 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-%define 	module	billiard
+%define		module	billiard
 Summary:	Multiprocessing Pool Extensions
 Summary(pl.UTF-8):	Rozszerzenia puli procesów
 Name:		python-%{module}
-Version:	3.6.3.0
-Release:	3
+Version:	3.6.4.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/billiard/
 Source0:	https://files.pythonhosted.org/packages/source/b/billiard/%{module}-%{version}.tar.gz
-# Source0-md5:	49f47bc7c6868e17591d8018d542b984
+# Source0-md5:	b49503b8a78743dcb6a86accea379357
 URL:		https://github.com/celery/billiard
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.752
