@@ -21,7 +21,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.752
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
-BuildRequires:	python-setuptools >= 40.0.0
+BuildRequires:	python-setuptools >= 1:40.0.0
 %if %{with tests}
 BuildRequires:	python-case >= 1.3.1
 BuildRequires:	python-psutil
@@ -33,7 +33,7 @@ BuildRequires:	sphinx-pdg
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.5
-BuildRequires:	python3-setuptools >= 40.0.0
+BuildRequires:	python3-setuptools >= 1:40.0.0
 %if %{with tests}
 BuildRequires:	python3-case >= 1.3.1
 BuildRequires:	python3-psutil
