@@ -10,7 +10,7 @@ Summary:	Multiprocessing Pool Extensions
 Summary(pl.UTF-8):	Rozszerzenia puli procesów
 Name:		python-%{module}
 Version:	3.6.4.0
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/billiard/
