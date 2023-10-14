@@ -9,6 +9,7 @@
 Summary:	Multiprocessing Pool Extensions
 Summary(pl.UTF-8):	Rozszerzenia puli procesów
 Name:		python-%{module}
+# keep 3.x here for python2 support
 Version:	3.6.4.0
 Release:	4
 License:	BSD
@@ -24,11 +25,11 @@ BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools >= 1:40.0.0
 %if %{with tests}
 BuildRequires:	python-case >= 1.3.1
-BuildRequires:	python-psutil
+BuildRequires:	python-psutil >= 5.8.0
 BuildRequires:	python-pytest
 %endif
 %if %{with doc}
-BuildRequires:	sphinx-pdg
+BuildRequires:	sphinx-pdg-2
 %endif
 %endif
 %if %{with python3}
@@ -36,7 +37,7 @@ BuildRequires:	python3-devel >= 1:3.5
 BuildRequires:	python3-setuptools >= 1:40.0.0
 %if %{with tests}
 BuildRequires:	python3-case >= 1.3.1
-BuildRequires:	python3-psutil
+BuildRequires:	python3-psutil >= 5.8.0
 BuildRequires:	python3-pytest
 %endif
 %endif
@@ -114,8 +115,8 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 
 %if %{with doc}
 cd Doc
-PYTHONPATH=$(pwd)/../build-3/lib \
-sphinx-build -b html -d .build/doctrees . .build/html
+PYTHONPATH=$(pwd)/../build-2/lib \
+sphinx-build-2 -b html -d .build/doctrees . .build/html
 cd ..
 %endif
 
