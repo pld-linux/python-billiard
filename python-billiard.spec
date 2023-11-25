@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Rozszerzenia puli procesów
 Name:		python-%{module}
 # keep 3.x here for python2 support
 Version:	3.6.4.0
-Release:	4
+Release:	5
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/billiard/
